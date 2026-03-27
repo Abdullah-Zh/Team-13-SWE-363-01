@@ -26,19 +26,20 @@ export function Sidebar() {
   ];
 
   return (
-    <div className="w-64 bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-700 flex flex-col shadow-sm transition-colors">
+    <div className="w-full shrink-0 border-b border-gray-200 bg-white shadow-sm transition-colors dark:border-gray-700 dark:bg-gray-900 md:w-64 md:border-r md:border-b-0">
       {/* Logo */}
-      <div className="h-16 border-b border-gray-200 dark:border-gray-700 flex items-center px-6">
+      <div className="flex h-16 items-center justify-between border-b border-gray-200 px-4 dark:border-gray-700 md:px-6">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#1E3A8A] to-[#06B6D4] flex items-center justify-center">
             <span className="text-white text-sm font-semibold">SC</span>
           </div>
           <span className="font-semibold text-lg text-[#1E3A8A] dark:text-white">SWE Compass</span>
         </div>
+        <div className="text-xs font-medium uppercase tracking-[0.2em] text-gray-400 md:hidden">Menu</div>
       </div>
 
       {/* Navigation */}
-      <nav className="flex-1 p-4 space-y-1">
+      <nav className="flex gap-2 overflow-x-auto p-3 md:block md:space-y-1 md:overflow-visible md:p-4">
         {navItems.map((item) => {
           const Icon = item.icon;
           const isActive = window.location.pathname === item.path;
@@ -47,7 +48,7 @@ export function Sidebar() {
             <NavLink
               key={item.path}
               to={item.path}
-              className={`flex items-center gap-3 px-4 py-3 rounded-2xl transition-all ${
+              className={`flex min-w-fit items-center gap-3 rounded-2xl px-4 py-3 whitespace-nowrap transition-all md:min-w-0 ${
                 isActive
                   ? "bg-[#1E3A8A] dark:bg-[#06B6D4] text-white shadow-md"
                   : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800"
@@ -61,7 +62,7 @@ export function Sidebar() {
       </nav>
 
       {/* Footer */}
-      <div className="p-4 border-t border-gray-200 dark:border-gray-700">
+      <div className="hidden border-t border-gray-200 p-4 dark:border-gray-700 md:block">
         <div className="text-xs text-gray-500 dark:text-gray-400 text-center">
           © 2026 SWE Compass
         </div>

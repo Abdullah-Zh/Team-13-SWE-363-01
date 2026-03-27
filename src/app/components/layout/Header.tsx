@@ -16,8 +16,8 @@ export function Header() {
   };
 
   return (
-    <header className="h-16 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 flex items-center justify-between px-8 shadow-sm transition-colors">
-      <div className="flex-1 max-w-md">
+    <header className="flex flex-col gap-4 border-b border-gray-200 bg-white px-4 py-4 shadow-sm transition-colors dark:border-gray-700 dark:bg-gray-900 sm:px-6 md:h-16 md:flex-row md:items-center md:justify-between md:px-8 md:py-0">
+      <div className="w-full flex-1 md:max-w-md">
         <div className="relative">
           <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 dark:text-gray-500" />
           <input
@@ -28,7 +28,7 @@ export function Header() {
         </div>
       </div>
 
-      <div className="flex items-center gap-4">
+      <div className="flex items-center justify-between gap-3 md:justify-end md:gap-4">
         <button 
           onClick={toggleTheme}
           className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
@@ -46,8 +46,8 @@ export function Header() {
           <span className="absolute top-1 right-1 w-2 h-2 bg-[#10B981] rounded-full"></span>
         </button>
 
-        <div className="flex items-center gap-3 pl-4 border-l border-gray-200 dark:border-gray-700 relative">
-          <div className="text-right">
+        <div className="relative flex items-center gap-3 border-l border-gray-200 pl-3 dark:border-gray-700 md:pl-4">
+          <div className="hidden text-right sm:block">
             <div className="text-sm font-medium text-gray-900 dark:text-gray-100">Abdullah Alzahrani</div>
             <div className="text-xs text-gray-500 dark:text-gray-400">Student</div>
           </div>

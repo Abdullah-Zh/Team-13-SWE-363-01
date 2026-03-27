@@ -5,29 +5,29 @@ export function Overview() {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1E3A8A] via-[#1E3A8A] to-[#06B6D4] text-white p-12">
+    <div className="min-h-screen bg-gradient-to-br from-[#1E3A8A] via-[#1E3A8A] to-[#06B6D4] px-4 py-8 text-white sm:px-6 sm:py-10 lg:px-12">
       {/* Header */}
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center w-24 h-24 rounded-[16px] bg-gradient-to-br from-[#06B6D4] to-[#1E3A8A] mb-6 shadow-2xl">
-            <span className="text-4xl font-bold">SC</span>
+        <div className="mb-10 text-center sm:mb-12">
+          <div className="mb-6 inline-flex h-20 w-20 items-center justify-center rounded-[16px] bg-gradient-to-br from-[#06B6D4] to-[#1E3A8A] shadow-2xl sm:h-24 sm:w-24">
+            <span className="text-3xl font-bold sm:text-4xl">SC</span>
           </div>
-          <h1 className="text-5xl font-bold mb-4">SWE Compass</h1>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+          <h1 className="mb-4 text-4xl font-bold sm:text-5xl">SWE Compass</h1>
+          <p className="mx-auto max-w-2xl text-base text-blue-100 sm:text-xl">
             A comprehensive academic platform for software engineering students at KFUPM to track prerequisites, access learning resources, and plan their academic journey.
           </p>
         </div>
 
         {/* Project Description */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-[16px] p-8 mb-12 border border-white/20">
+        <div className="mb-10 rounded-[16px] border border-white/20 bg-white/10 p-5 backdrop-blur-sm sm:mb-12 sm:p-8">
           <h2 className="text-2xl font-bold mb-4">Project Goal</h2>
-          <p className="text-blue-100 text-lg leading-relaxed mb-6">
+          <p className="mb-6 text-base leading-relaxed text-blue-100 sm:text-lg">
             SWE Compass helps students navigate the 129 credit-hour Software Engineering curriculum by visualizing course prerequisites, 
             managing their academic plans, and accessing peer-reviewed study materials. The platform supports three user roles with distinct 
             capabilities to ensure a collaborative and quality-controlled learning environment.
           </p>
           
-          <div className="grid grid-cols-3 gap-6 mt-8">
+          <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-6">
             <div className="bg-white/5 rounded-[12px] p-6 border border-white/10">
               <div className="flex items-center gap-3 mb-3">
                 <Users className="w-6 h-6 text-[#06B6D4]" />
@@ -61,25 +61,25 @@ export function Overview() {
         </div>
 
         {/* User Flow Diagram */}
-        <div className="bg-white/10 backdrop-blur-sm rounded-[16px] p-8 border border-white/20">
+        <div className="rounded-[16px] border border-white/20 bg-white/10 p-5 backdrop-blur-sm sm:p-8">
           <h2 className="text-2xl font-bold mb-6">User Flow</h2>
-          <div className="flex items-center justify-center gap-6 flex-wrap">
+          <div className="flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-6">
             <div className="bg-white text-[#1E3A8A] rounded-[12px] px-6 py-4 font-semibold shadow-lg">
               Login / Sign Up
             </div>
-            <ArrowRight className="w-6 h-6" />
+            <ArrowRight className="mx-auto hidden h-6 w-6 sm:block" />
             <div className="bg-white text-[#1E3A8A] rounded-[12px] px-6 py-4 font-semibold shadow-lg">
               Dashboard
             </div>
-            <ArrowRight className="w-6 h-6" />
+            <ArrowRight className="mx-auto hidden h-6 w-6 sm:block" />
             <div className="bg-white text-[#1E3A8A] rounded-[12px] px-6 py-4 font-semibold shadow-lg">
               Prerequisite Roadmap
             </div>
-            <ArrowRight className="w-6 h-6" />
+            <ArrowRight className="mx-auto hidden h-6 w-6 sm:block" />
             <div className="bg-white text-[#1E3A8A] rounded-[12px] px-6 py-4 font-semibold shadow-lg">
               Resource Library
             </div>
-            <ArrowRight className="w-6 h-6" />
+            <ArrowRight className="mx-auto hidden h-6 w-6 sm:block" />
             <div className="bg-white text-[#1E3A8A] rounded-[12px] px-6 py-4 font-semibold shadow-lg">
               Upload Materials
             </div>
@@ -87,7 +87,7 @@ export function Overview() {
 
           <div className="mt-8 text-center">
             <p className="text-blue-100 mb-4">Additional flows based on role:</p>
-            <div className="flex justify-center gap-4">
+            <div className="flex flex-col justify-center gap-3 sm:flex-row sm:gap-4">
               <div className="bg-[#10B981]/20 text-white rounded-[12px] px-4 py-2 text-sm border border-[#10B981]/30">
                 Moderator → Review Submissions
               </div>
@@ -99,7 +99,7 @@ export function Overview() {
         </div>
 
         {/* Key Features */}
-        <div className="grid grid-cols-4 gap-6 mt-12">
+        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-4">
           <div className="text-center">
             <div className="bg-white/10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
               <TrendingUp className="w-8 h-8" />
@@ -134,7 +134,7 @@ export function Overview() {
         <div className="text-center mt-12">
           <button
             onClick={() => navigate("/login")}
-            className="bg-white text-[#1E3A8A] px-8 py-4 rounded-[12px] font-bold text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all inline-flex items-center gap-2"
+            className="inline-flex items-center gap-2 rounded-[12px] bg-white px-6 py-4 text-base font-bold text-[#1E3A8A] shadow-xl transition-all hover:scale-105 hover:shadow-2xl sm:px-8 sm:text-lg"
           >
             Get Started
             <ArrowRight className="w-5 h-5" />

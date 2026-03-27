@@ -1,9 +1,9 @@
 export function BrowserMockup({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center p-8">
-      <div className="w-full max-w-[1440px] bg-white rounded-xl shadow-2xl overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-100 to-slate-200 p-0 md:flex md:items-center md:justify-center md:p-8">
+      <div className="min-h-screen w-full bg-white overflow-hidden md:min-h-0 md:max-w-[1440px] md:rounded-xl md:shadow-2xl">
         {/* Browser Top Bar */}
-        <div className="h-11 bg-gradient-to-b from-gray-200 to-gray-100 border-b border-gray-300 flex items-center px-4 gap-3">
+        <div className="hidden h-11 items-center gap-3 border-b border-gray-300 bg-gradient-to-b from-gray-200 to-gray-100 px-4 md:flex">
           <div className="flex gap-2">
             <div className="w-3 h-3 rounded-full bg-red-500"></div>
             <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
@@ -19,7 +19,7 @@ export function BrowserMockup({ children }: { children: React.ReactNode }) {
         </div>
         
         {/* Application Content */}
-        <div className="h-[calc(100vh-160px)] overflow-hidden">
+        <div className="min-h-screen overflow-hidden md:h-[calc(100vh-160px)] md:min-h-0">
           {children}
         </div>
       </div>

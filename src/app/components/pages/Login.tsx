@@ -21,11 +21,11 @@ export function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1E3A8A] via-[#1E3A8A] to-[#06B6D4] flex items-center justify-center p-8">
+    <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-[#1E3A8A] via-[#1E3A8A] to-[#06B6D4] px-4 py-8 sm:p-8">
       {/* Decorative background elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full -ml-48 -mt-48"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#06B6D4]/10 rounded-full -mr-48 -mb-48"></div>
-      <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-white/5 rounded-full"></div>
+      <div className="absolute top-1/2 left-1/4 hidden h-64 w-64 rounded-full bg-white/5 md:block"></div>
 
       <div className="relative z-10 w-full max-w-md">
         {/* Logo and Header */}
@@ -33,12 +33,12 @@ export function Login() {
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-[16px] bg-gradient-to-br from-[#06B6D4] to-[#1E3A8A] mb-4 shadow-xl">
             <span className="text-3xl font-bold text-white">SC</span>
           </div>
-          <h1 className="text-4xl font-bold text-white mb-2">SWE Compass</h1>
+          <h1 className="mb-2 text-3xl font-bold text-white sm:text-4xl">SWE Compass</h1>
           <p className="text-blue-100">Software Engineering Learning Platform</p>
         </div>
 
         {/* Login Card */}
-        <div className="bg-white dark:bg-gray-900 rounded-[16px] shadow-2xl p-8">
+        <div className="rounded-[16px] bg-white p-5 shadow-2xl dark:bg-gray-900 sm:p-8">
           <div className="mb-6">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2">Welcome Back</h2>
             <p className="text-gray-600 dark:text-gray-400">Sign in to continue your learning journey</p>
@@ -91,7 +91,7 @@ export function Login() {
             </div>
 
             {/* Remember Me and Forgot Password */}
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
               <label className="flex items-center cursor-pointer">
                 <input
                   type="checkbox"
@@ -127,7 +127,7 @@ export function Login() {
           </div>
 
           {/* Social Login Buttons */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <button
               type="button"
               className="flex items-center justify-center gap-2 py-3 px-4 bg-[#F8FAFC] dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700 rounded-xl transition-all"

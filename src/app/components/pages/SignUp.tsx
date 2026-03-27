@@ -54,11 +54,11 @@ export function SignUp() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1E3A8A] via-[#1E3A8A] to-[#06B6D4] flex items-center justify-center p-8">
+    <div className="relative flex min-h-screen items-center justify-center overflow-hidden bg-gradient-to-br from-[#1E3A8A] via-[#1E3A8A] to-[#06B6D4] px-4 py-8 sm:p-8">
       {/* Decorative background elements */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full -ml-48 -mt-48"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#06B6D4]/10 rounded-full -mr-48 -mb-48"></div>
-      <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-white/5 rounded-full"></div>
+      <div className="absolute top-1/2 left-1/4 hidden h-64 w-64 rounded-full bg-white/5 md:block"></div>
 
       <div className="relative z-10 w-full max-w-md">
         {/* Logo and Header */}
@@ -66,12 +66,12 @@ export function SignUp() {
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-[16px] bg-gradient-to-br from-[#06B6D4] to-[#1E3A8A] mb-4 shadow-xl">
             <span className="text-3xl font-bold text-white">SC</span>
           </div>
-          <h1 className="text-4xl font-bold text-white mb-2">Create Account</h1>
+          <h1 className="mb-2 text-3xl font-bold text-white sm:text-4xl">Create Account</h1>
           <p className="text-blue-100">Join SWE Compass and start your journey</p>
         </div>
 
         {/* Sign Up Card */}
-        <div className="bg-white dark:bg-gray-900 rounded-[16px] shadow-2xl p-8">
+        <div className="rounded-[16px] bg-white p-5 shadow-2xl dark:bg-gray-900 sm:p-8">
           {/* Description */}
           <div className="mb-6 bg-[#06B6D4]/10 dark:bg-[#06B6D4]/20 rounded-[12px] p-4 border border-[#06B6D4]/20">
             <p className="text-sm text-gray-700 dark:text-gray-300">
