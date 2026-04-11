@@ -42,8 +42,9 @@ export function Dashboard() {
           <p className="mb-6 max-w-2xl text-sm text-blue-100 sm:text-base">
             You're on track to complete your Software Engineering pathway this semester.
           </p>
+          {/* FIXED PATH BELOW: /app/roadmap */}
           <Link 
-            to="/roadmap" 
+            to="/app/roadmap" 
             className="inline-flex items-center gap-2 rounded-2xl bg-white px-5 py-3 text-sm font-medium text-[#1E3A8A] transition-all hover:shadow-lg sm:px-6 sm:text-base"
           >
             View Your Roadmap
@@ -81,7 +82,8 @@ export function Dashboard() {
         <Annotation number={5} label="Recent Courses – Track your course progress" position="top-right" />
         <div className="mb-6 flex items-center justify-between gap-3">
           <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">Recent Courses</h2>
-          <Link to="/roadmap" className="text-[#06B6D4] hover:text-[#1E3A8A] dark:hover:text-[#06B6D4] transition-colors">
+          {/* FIXED PATH BELOW: /app/roadmap */}
+          <Link to="/app/roadmap" className="text-[#06B6D4] hover:text-[#1E3A8A] dark:hover:text-[#06B6D4] transition-colors">
             View All
           </Link>
         </div>
