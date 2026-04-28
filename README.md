@@ -8,7 +8,7 @@
 
 | Member | Name | Phase 5 Role | Phase 6 Role |
 | :--- | :--- | :--- | :--- |
-| **Member 1** | Waleed Alharbi | **Architecture & Setup** — Initialize Express & folder structure (MVC), implement security middleware (Helmet/CORS), create README "How-to-Run" section & `.env.example` | — |
+| **Member 1** | Waleed Almehmadi | **Architecture & Setup** — Initialize Express & folder structure (MVC), implement security middleware (Helmet/CORS), create README "How-to-Run" section & `.env.example` | — |
 | **Member 2** | Abdullah Alzahrani | **Database & Auth** — Connect MongoDB Atlas, design all schemas, implement User Authentication endpoints, write schema diagram/description for documentation | — |
 | **Member 3** | Amin Srraj | **Logic & Documentation** — Build all CRUD APIs, implement Joi validation, write API table for README (Methods, Paths, and sample JSON Request/Response) | — |
 | **Member 4** | Sultan Alsbia | — | **Deployment & Performance** — Deploy to live platforms (Render/Vercel), configure production CORS/HTTPS, optimize assets (Minify JS/CSS and compress images) |
