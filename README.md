@@ -6,11 +6,13 @@
 
 ## 👥 Team Members
 
-* **Aseel Bawazir**: Architect
-* **Waleed Alharbi**: UI Lead
-* **Sultan Alsbia**: Feature Developer A
-* **Amin Srraj**: Feature Developer B
-* **Abdullah Alzahrani**: QA and Documentation
+| Member | Name | Phase 5 Role | Phase 6 Role |
+| :--- | :--- | :--- | :--- |
+| **Member 1** | Waleed Alharbi | **Architecture & Setup** — Initialize Express & folder structure (MVC), implement security middleware (Helmet/CORS), create README "How-to-Run" section & `.env.example` | — |
+| **Member 2** | Abdullah Alzahrani | **Database & Auth** — Connect MongoDB Atlas, design all schemas, implement User Authentication endpoints, write schema diagram/description for documentation | — |
+| **Member 3** | Amin Srraj | **Logic & Documentation** — Build all CRUD APIs, implement Joi validation, write API table for README (Methods, Paths, and sample JSON Request/Response) | — |
+| **Member 4** | Sultan Alsbia | — | **Deployment & Performance** — Deploy to live platforms (Render/Vercel), configure production CORS/HTTPS, optimize assets (Minify JS/CSS and compress images) |
+| **Member 5** | Aseel Bawazir | — | **Quality & Video** — Conduct full Mobile/Desktop responsiveness audit, record the 3–5 minute Demo Video, add Live URL and Demo Login Credentials to the final README |
 
 ---
 
@@ -121,10 +123,44 @@ public/                # Static assets and icons
 
 ## Backend Setup
 
+### Prerequisites
+* **Node.js**: version 18 or higher
+* **MongoDB Atlas**: Cluster0 on `cluster0.i5zhp4x.mongodb.net` (database: `swe363db`)
+
+### Environment Variables
+
+Copy `.env.example` to `.env` inside the `backend/` folder:
+
+```bash
+cp backend/.env.example backend/.env
+```
+
+The `.env.example` file already contains the real values for the team:
+
+| Variable | Value |
+| :--- | :--- |
+| `PORT` | `5000` |
+| `MONGO_URI` | MongoDB Atlas connection string |
+| `JWT_SECRET` | `swe363team13secret` |
+
+### Start the Server
+
 ```bash
 cd backend
 npm install
 npm start
 ```
 
+Expected output:
+```
+MongoDB connected
+Server is running on port 5000
+```
+
 Server runs on `http://localhost:5000`
+
+### What Was Done (Phase 5)
+* Created `backend/` with Express, CORS, and Helmet
+* Installed `mongoose` and connected to MongoDB Atlas (Cluster0)
+* `server.js` connects to MongoDB before starting the HTTP server, exits on failure
+* `.env` loaded via `dotenv` — never committed to git
